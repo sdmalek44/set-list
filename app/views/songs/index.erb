@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Songs</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="head-bar"><div class="">Songs</div></header>
+    <section class="middle-part">
+      <% songs.each do |song| %>
+        <article class="song-box">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFvoIGBG1rY6QIHQcLMHUH6v43vNY7Us54xp0pK0jvvvf9THOj" class="picture">
+          <div class="attribute"><%= song.title %></div>
+          <div class="attribute"><%= song.length %> seconds</div>
+          <div class="attrubute">play count: <%= song.play_count %></div>
+          <!-- <% if song.playlist %>
+            <div class="attribute"><%= song.playlist.name %></div>
+          <% end %> -->
+        </article>
+      <% end %>
+    </section>
+  </body>
+</html>
